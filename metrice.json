@@ -1,0 +1,17 @@
+{
+    "Namespace": "AWS/EC2",
+    "MetricName": "CPUUTILIZATION",
+    "Dimensions": [
+        {
+            "Name": "InstanceId",
+            "Value": "i-0c04d83ff15d676d1"
+        }
+    ],
+   "StartTime": "2021-12-13T00:20:00",
+    "EndTime": "2021-12-13T12:25:00",
+    "Period": 3600,
+    "Statistics": [
+        "Maximum"
+    ],
+    "Unit": "Percent"
+}

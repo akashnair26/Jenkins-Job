@@ -1,0 +1,26 @@
+{
+    "MetricDataQueries": [
+        {
+            "Id": "myRequest",
+            "MetricStat": {
+                "Metric": {
+                    "Namespace": "AWS/EC2",
+                    "MetricName": "CPUUTILIZATION",
+                    "Dimensions": [
+                        {
+                            "Name": "InstanceId",
+                            "Value": "i-0c04d83ff15d676d1"
+                        }
+                    ]
+                },
+                "Period": 3600,
+                "Stat": "Maximum",
+                "Unit": "Percent"
+            },
+            "Label": "myRequestLabel",
+            "ReturnData": true
+        }
+    ],
+    "StartTime": "2021-12-13T10:40:0000",
+    "EndTime": "2021-12-13T14:12:0000"
+}
