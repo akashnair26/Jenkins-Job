@@ -21,7 +21,7 @@ The data in the CPU and Network field should be in the relative form. If the CPU
 
 * aws ec2 describe-instances  --region ${AWS_REGION} --query "Reservations[*].Instances[*].{PublicIP:PublicIpAddress,ENV:Tags[?Key==\'ENV\']|[0].Value, Name:Tags[?Key==\'Name\']|[0].Value, APPLICATION:Tags[?Key==\'APPLICATION\']|[0].Value, SERVER_TYPE:Tags[?Key==\'SERVER_TYPE\']|[0].Value,Status:State.Name}" --output table
  
-aws ec2 describe-instances  --region ${AWS_REGION} --query "Reservations[*].Instances[*].{PublicIP:PublicIpAddress,ENV:Tags[?Key==\'ENV\']|[0].Value, Name:Tags[?Key==\'Name\']|[0].Value, APPLICATION:Tags[?Key==\'APPLICATION\']|[0].Value, SERVER_TYPE:Tags[?Key==\'SERVER_TYPE\']|[0].Value,Status:State.Name}" --filters "Name=tag:ENV,Values=${ENV}" "Name=tag:SERVER_TYPE,Values=${SERVER_TYPE}"  "Name=tag:APPLICATION,Values=${APPLICATION}" --output table
+* aws ec2 describe-instances  --region ${AWS_REGION} --query "Reservations[*].Instances[*].{PublicIP:PublicIpAddress,ENV:Tags[?Key==\'ENV\']|[0].Value, Name:Tags[?Key==\'Name\']|[0].Value, APPLICATION:Tags[?Key==\'APPLICATION\']|[0].Value, SERVER_TYPE:Tags[?Key==\'SERVER_TYPE\']|[0].Value,Status:State.Name}" --filters "Name=tag:ENV,Values=${ENV}" "Name=tag:SERVER_TYPE,Values=${SERVER_TYPE}"  "Name=tag:APPLICATION,Values=${APPLICATION}" --output table
 
 # 2) aws-cli cloudwatch script to display metrices of instances.
 
